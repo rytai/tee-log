@@ -50,8 +50,8 @@ size_t WebSocketStream::write(uint8_t c)
         _buff[_at++] = 0;
         if (_ws)
         {
-            Serial.println("LINELINE");
-            Serial.printf("--%s--\n", _buff);
+            // Serial.println("LINELINE");
+            // Serial.printf("--%s--\n", _buff);
             _ws->textAll((const char *)_buff, _at);
         }
         _at = 0;
