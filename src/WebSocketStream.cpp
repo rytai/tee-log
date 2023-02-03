@@ -66,7 +66,6 @@ size_t WebSocketStream::write(uint8_t c)
 
 void WebSocketStream::begin()
 {
-    Log.printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     if (_ws != NULL)
     {
         return;
