@@ -39,10 +39,8 @@
 class WebSocketStream : public TLog
 {
 public:
-    WebSocketStream(AsyncWebServer *webServer, const char *path = "/ws") : _server(webServer), wsPath(path) { Serial.println("CONSTA"); };
-    WebSocketStream(const uint16_t wsPort = 80, const char *path = "/ws") : _webPort(wsPort), wsPath(path) { Serial.println("CONSTB"); };
-    // WebSocketStream(const uint16_t wsPort = 80, const char *path = "/ws") : _webPort(wsPort), wsPath(path) { Serial.println("CONSTB"); };
-    //~WebSocketStream();
+    WebSocketStream(AsyncWebServer *webServer, const char *path = "/ws") : _server(webServer), wsPath(path){};
+    WebSocketStream(const uint16_t wsPort = 80, const char *path = "/ws") : _webPort(wsPort), wsPath(path){};
     virtual size_t write(uint8_t c);
     virtual void begin();
     virtual void loop();
