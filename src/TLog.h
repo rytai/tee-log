@@ -67,21 +67,14 @@ public:
   // void addPrintStream2(const LOGBase * _handler) { addPrintStream(std::make_shared<LOGBase>(_handler)); }
   void addPrintStream(const std::shared_ptr<LOGBase> &_handler)
   {
-    Serial.println("A");
     auto it = find(handlers.begin(), handlers.end(), _handler);
-    Serial.println("B");
     if (handlers.end() == it)
     {
-
       // we're not using push_back; that copies; but use a reference.
       // As it can see reuse.
 
-      Serial.println("C");
       handlers.emplace_back(_handler);
-
-      Serial.println("D");
     }
-    Serial.println("E");
   };
   virtual void begin()
   {
